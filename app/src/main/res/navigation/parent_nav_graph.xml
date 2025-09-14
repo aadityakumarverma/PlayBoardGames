@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parent_nav_graph"
+    app:startDestination="@id/SplashFragment">
+
+
+    <fragment
+        android:id="@+id/SplashFragment"
+        android:name="com.pbgames.views.fragments.common.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash" />
+
+    <fragment
+        android:id="@+id/OnboardingScreenFragment"
+        android:name="com.pbgames.views.fragments.common.OnboardingScreenFragment"
+        android:label="fragment_onboarding_screen"
+        tools:layout="@layout/fragment_onboarding_screen" />
+
+    <fragment
+        android:id="@+id/SelectGameFragment"
+        android:name="com.pbgames.views.fragments.common.SelectGameFragment"
+        android:label="fragment_select_game"
+        tools:layout="@layout/fragment_select_game" />
+    <fragment
+        android:id="@+id/TicTacGameFragment"
+        android:name="com.pbgames.views.fragments.tic_tac.TicTacGameFragment"
+        android:label="fragment_tic_tac_game"
+        tools:layout="@layout/fragment_tic_tac_game" />
+</navigation>

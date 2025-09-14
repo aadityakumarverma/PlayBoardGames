@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.compose.compiler)
 }
 
 android {
@@ -64,4 +65,17 @@ dependencies {
     implementation(libs.glide)
     annotationProcessor(libs.compiler)
     implementation(libs.lottie)
+
+    // Compose BOM (manages versions automatically)
+    implementation(platform(libs.compose.bom))
+
+// Core Compose libraries
+    implementation(libs.compose.ui)
+    implementation(libs.compose.ui.graphics)
+    implementation(libs.compose.ui.tooling.preview)
+    implementation(libs.compose.material3)
+
+// Debug-only tooling
+    debugImplementation(libs.compose.ui.tooling)
+
 }
