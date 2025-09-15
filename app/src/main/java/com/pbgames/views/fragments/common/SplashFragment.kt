@@ -36,11 +36,10 @@ class SplashFragment : Fragment() {
         val isOnboardingRead =sharedPreferencesHelper.getBoolean("KeyIsOnboardingRead",false)
         val isAlreadyLoggedIn =sharedPreferencesHelper.getBoolean("IsAlreadyLoggedIn",false)
 
-        binding.vBg.isVisible=true
 
 
         Handler(Looper.getMainLooper()).postDelayed({
-            if (isOnboardingRead) {
+            /*if (isOnboardingRead) {
                 if (isAlreadyLoggedIn) {
                     navController.navigate(R.id.TicTacGameFragment, null, navOptionsPopUpIn)
                 } else {
@@ -48,7 +47,8 @@ class SplashFragment : Fragment() {
                 }
             } else {
                 navController.navigate(R.id.OnboardingScreenFragment, null, navOptionsPopUpIn)
-            }
+            }*/
+            navController.navigate(R.id.TicTacGameFragment, null, navOptionsPopUpIn)
         },2600)
 
 
