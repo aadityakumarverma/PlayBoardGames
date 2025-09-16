@@ -39,12 +39,14 @@
                         android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:background="#00000000"
+                        android:foreground="?selectableItemBackgroundBorderless"
                         android:scaleType="centerCrop"
                         app:contentPadding="@dimen/_10sdp" />
                     <com.google.android.material.imageview.ShapeableImageView
                         android:id="@+id/ivBox01"
                         android:layout_width="@dimen/_0sdp"
                         android:layout_height="match_parent"
+                        android:foreground="?selectableItemBackgroundBorderless"
                         android:layout_weight="1"
                         android:background="#10000000"
                         android:scaleType="centerCrop"
@@ -53,6 +55,7 @@
                         android:id="@+id/ivBox02"
                         android:layout_width="@dimen/_0sdp"
                         android:layout_height="match_parent"
+                        android:foreground="?selectableItemBackgroundBorderless"
                         android:layout_weight="1"
                         android:background="#00000000"
                         android:scaleType="centerCrop"
