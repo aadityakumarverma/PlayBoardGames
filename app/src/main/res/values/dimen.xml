@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="neg_30dp">-30dp</dimen>
+    <dimen name="neg_20dp">-20dp</dimen>
+    <dimen name="neg_10dp">-10dp</dimen>
+    <dimen name="neg_8dp">-8dp</dimen>
+    <dimen name="neg_7dp">-7dp</dimen>
+    <dimen name="neg_6dp">-6dp</dimen>
+    <dimen name="neg_5dp">-5dp</dimen>
+    <dimen name="neg_4dp">-4dp</dimen>
+    <dimen name="neg_3dp">-3dp</dimen>
+    <dimen name="neg_2dp">-2dp</dimen>
+    <dimen name="neg_1dp">-1dp</dimen>
+    <dimen name="_0sdp">0dp</dimen>
+
+    <dimen name="_40dp">40dp</dimen>
+
+    <dimen name="tv_big_header_size">@dimen/_26sdp</dimen>
+    <dimen name="tv_mid_header_size">@dimen/_24sdp</dimen>
+    <dimen name="tv_header_size">@dimen/_20sdp</dimen>
+    <dimen name="tv_small_header_size">@dimen/_18sdp</dimen>
+    <dimen name="tv_title_size">@dimen/_16sdp</dimen>
+    <dimen name="tv_heading_size">@dimen/_16sdp</dimen>
+    <dimen name="tv_name_size">@dimen/_14sdp</dimen>
+    <dimen name="tv_label_size">@dimen/_12sdp</dimen>
+    <dimen name="et_text_size">@dimen/_12sdp</dimen>
+    <dimen name="btn_text_size">@dimen/_12sdp</dimen>
+    <dimen name="tv_size">@dimen/_11sdp</dimen>
+    <dimen name="tv_small_size">@dimen/_10sdp</dimen>
+    <dimen name="tv_smallest_size">@dimen/_8sdp</dimen>
+    <dimen name="tv_short_size">@dimen/_7sdp</dimen>
+
+    <dimen name="tv_chart_day_size">@dimen/_10sdp</dimen>
+    <dimen name="tv_chart_date_size">@dimen/_8sdp</dimen>
+
+
+</resources>
