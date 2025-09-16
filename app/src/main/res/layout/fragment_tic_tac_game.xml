@@ -30,66 +30,93 @@
                 android:orientation="vertical">
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="@dimen/_0sdp"
                     android:layout_weight="1"
                     android:orientation="horizontal">
-                    <View
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/ivBox00"
                         android:layout_width="@dimen/_0sdp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:background="#20000000" />
-                    <View
+                        android:background="#00000000"
+                        android:scaleType="centerCrop"
+                        app:contentPadding="@dimen/_10sdp" />
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/ivBox01"
                         android:layout_width="@dimen/_0sdp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:background="#00000000" />
-                    <View
+                        android:background="#10000000"
+                        android:scaleType="centerCrop"
+                        app:contentPadding="@dimen/_10sdp" />
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/ivBox02"
                         android:layout_width="@dimen/_0sdp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:background="#20000000" />
+                        android:background="#00000000"
+                        android:scaleType="centerCrop"
+                        app:contentPadding="@dimen/_10sdp" />
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="@dimen/_0sdp"
                     android:layout_weight="1"
                     android:orientation="horizontal">
-                    <View
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/ivBox11"
                         android:layout_width="@dimen/_0sdp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:background="#00000000" />
-                    <View
+                        android:background="#10000000"
+                        android:scaleType="centerCrop"
+                        app:contentPadding="@dimen/_10sdp" />
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/ivBox12"
                         android:layout_width="@dimen/_0sdp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:background="#20000000" />
-                    <View
+                        android:background="#00000000"
+                        android:scaleType="centerCrop"
+                        app:contentPadding="@dimen/_10sdp" />
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/ivBox13"
                         android:layout_width="@dimen/_0sdp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:background="#00000000" />
+                        android:background="#10000000"
+                        android:scaleType="centerCrop"
+                        app:contentPadding="@dimen/_10sdp" />
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="@dimen/_0sdp"
                     android:layout_weight="1"
                     android:orientation="horizontal">
-                    <View
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/ivBox21"
                         android:layout_width="@dimen/_0sdp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:background="#20000000" />
-                    <View
+                        android:background="#00000000"
+                        android:scaleType="centerCrop"
+                        app:contentPadding="@dimen/_10sdp" />
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/ivBox22"
                         android:layout_width="@dimen/_0sdp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:background="#00000000" />
-                    <View
+                        android:background="#10000000"
+                        android:scaleType="centerCrop"
+                        app:contentPadding="@dimen/_10sdp" />
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/ivBox23"
                         android:layout_width="@dimen/_0sdp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:background="#20000000" />
+                        android:background="#00000000"
+                        android:scaleType="centerCrop"
+                        app:contentPadding="@dimen/_10sdp" />
                 </LinearLayout>
             </LinearLayout>
 
