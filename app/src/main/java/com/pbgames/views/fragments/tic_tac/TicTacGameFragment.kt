@@ -11,9 +11,11 @@ import androidx.navigation.fragment.findNavController
 import com.pbgames.R
 import com.pbgames.databinding.FragmentTicTacGameBinding
 import com.pbgames.utils.SharedPreferencesHelper
+import com.pbgames.views.activities.MainActivity.Companion.mySystemBars
 
 class TicTacGameFragment : Fragment() {
-    lateinit var binding: FragmentTicTacGameBinding
+    private var _binding: FragmentTicTacGameBinding? = null
+    private val binding get() = _binding!!
     lateinit var sharedPreferencesHelper: SharedPreferencesHelper
     lateinit var navController: NavController
 
@@ -21,21 +23,20 @@ class TicTacGameFragment : Fragment() {
 
     var toggle = "cross"
 
+    var alternateStarter = true
+
     var player1Score = 0
     var player2Score = 0
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        binding = FragmentTicTacGameBinding.inflate(layoutInflater)
-        sharedPreferencesHelper = SharedPreferencesHelper.getInstance(requireContext())
-        navController =findNavController()
-
-    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        _binding = FragmentTicTacGameBinding.inflate(inflater, container, false)
+        sharedPreferencesHelper = SharedPreferencesHelper.getInstance(requireContext())
+        navController =findNavController()
+
+        binding.llAppBar.setPadding(0, mySystemBars.top,0,0)
 
         return binding.root
     }
@@ -46,9 +47,16 @@ class TicTacGameFragment : Fragment() {
 
         binding.apply {
             listBoxes = arrayListOf(ivBox00,ivBox01,ivBox02, ivBox10,ivBox11,ivBox12, ivBox20,ivBox21,ivBox22)
+            listBoxes.forEach { it.tag = "none" }
+
 
             setListeners(listBoxes)
         }
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 
     private fun setListeners(boxes: ArrayList<ImageView>) {
@@ -67,46 +75,46 @@ class TicTacGameFragment : Fragment() {
 
     private fun checkWinner() {
         binding.apply {
-            val tag00 = ivBox00.tag
-            val tag01 = ivBox01.tag
-            val tag02 = ivBox02.tag
-            val tag10 = ivBox10.tag
-            val tag11 = ivBox11.tag
-            val tag12 = ivBox12.tag
-            val tag20 = ivBox20.tag
-            val tag21 = ivBox21.tag
-            val tag22 = ivBox22.tag
+            val winLines = listOf(
+                listOf(ivBox00, ivBox01, ivBox02),
+                listOf(ivBox10, ivBox11, ivBox12),
+                listOf(ivBox20, ivBox21, ivBox22),
+                listOf(ivBox00, ivBox10, ivBox20),
+                listOf(ivBox01, ivBox11, ivBox21),
+                listOf(ivBox02, ivBox12, ivBox22),
+                listOf(ivBox00, ivBox11, ivBox22),
+                listOf(ivBox20, ivBox11, ivBox02)
+            )
 
-            if ((tag00 == tag01 && tag01 == tag02 && tag02 != "none") ||
-                (tag10 == tag11 && tag11 == tag12 && tag12 != "none") ||
-                (tag20 == tag21 && tag21 == tag22 && tag22 != "none") ||
+            for (line in winLines){
+                val tag1 = line[0].tag.toString()
+                val tag2 = line[1].tag.toString()
+                val tag3 = line[2].tag.toString()
 
-                (tag00 == tag10 && tag10 == tag20 && tag20 != "none") ||
-                (tag01 == tag11 && tag11 == tag21 && tag21 != "none") ||
-                (tag02 == tag12 && tag12 == tag22 && tag22 != "none") ||
-
-                (tag00 == tag11 && tag11 == tag22 && tag22 != "none") ||
-                (tag20 == tag11 && tag11 == tag02 && tag02 != "none") ){
-
-                if (tag00 == "cross") {
-                    increasePlayer1Score()
-                } else {
-                    increasePlayer2Score()
+                if (tag1 == tag2 && tag2 == tag3 && tag1 != "none"){
+                    if (tag1 == "cross") increasePlayer1Score() else increasePlayer2Score()
+                    return
                 }
+
+            }
+
+            if (listBoxes.all { it.tag != "none" }) {
+                resetBoard()
             }
 
         }
     }
 
+
     private fun increasePlayer1Score() {
         player1Score++
-        binding.tvPlayer1Score.text = String.format("%2d", player1Score)
+        binding.tvPlayer1Score.text = String.format("%02d", player1Score)
         resetBoard()
     }
 
     private fun increasePlayer2Score() {
         player2Score++
-        binding.tvPlayer2Score.text = String.format("%2d", player2Score)
+        binding.tvPlayer2Score.text = String.format("%02d", player2Score)
         resetBoard()
     }
     private fun resetBoard() {
@@ -115,14 +123,20 @@ class TicTacGameFragment : Fragment() {
             box.isEnabled = true
             box.tag = "none"
         }
-        toggle = "cross"
+        if (alternateStarter) {
+            toggle = "circle"
+            alternateStarter = false
+        } else {
+            toggle = "cross" // alternate starter
+            alternateStarter = true
+        }
     }
 
     private fun restartGame() {
         player1Score = 0
         player2Score = 0
-        binding.tvPlayer1Score.text = String.format("%2d", player1Score)
-        binding.tvPlayer2Score.text = String.format("%2d", player2Score)
+        binding.tvPlayer1Score.text = String.format("%02d", player1Score)
+        binding.tvPlayer2Score.text = String.format("%02d", player2Score)
         resetBoard()
     }
 }

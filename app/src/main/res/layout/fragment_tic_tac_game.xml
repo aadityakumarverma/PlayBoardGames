@@ -7,6 +7,7 @@
     tools:context=".views.fragments.tic_tac.TicTacGameFragment">
 
     <LinearLayout
+        android:id="@+id/llAppBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
