@@ -28,4 +28,9 @@
         android:name="com.pbgames.views.fragments.tic_tac.TicTacGameFragment"
         android:label="fragment_tic_tac_game"
         tools:layout="@layout/fragment_tic_tac_game" />
+    <fragment
+        android:id="@+id/LudoFragment"
+        android:name="com.pbgames.views.fragments.ludo.LudoFragment"
+        android:label="fragment_ludo"
+        tools:layout="@layout/fragment_ludo" />
 </navigation>
