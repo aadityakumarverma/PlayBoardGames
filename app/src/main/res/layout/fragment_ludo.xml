@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/png_bg"
     tools:context=".views.fragments.ludo.LudoFragment">
 
     <LinearLayout
@@ -93,9 +94,9 @@
         <androidx.cardview.widget.CardView
             android:layout_width="@dimen/_0sdp"
             android:layout_height="@dimen/_0sdp"
-            android:layout_marginHorizontal="@dimen/_10sdp"
+            android:layout_marginHorizontal="@dimen/_5sdp"
             android:layout_marginVertical="@dimen/_20sdp"
-            app:cardCornerRadius="@dimen/_5sdp"
+            app:cardCornerRadius="@dimen/_0sdp"
             app:cardElevation="@dimen/_5sdp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintDimensionRatio="1:1"
@@ -113,11 +114,12 @@
                     android:layout_weight="6"
                     android:orientation="horizontal">
                     <LinearLayout
-                        android:id="@+id/ivBox00"
                         android:layout_width="@dimen/_0sdp"
                         android:layout_height="match_parent"
                         android:layout_weight="6"
-                        android:background="#EEA3A3"
+                        android:background="@color/tag_red"
+                        android:foreground="@drawable/fg_stroke1"
+                        android:foregroundTint="@color/border_color"
                         android:orientation="vertical"
                         android:tag="none">
                         <androidx.cardview.widget.CardView
@@ -137,21 +139,23 @@
                                     android:layout_weight="1"
                                     android:orientation="horizontal">
                                     <androidx.cardview.widget.CardView
+                                        android:id="@+id/cvRedHome1"
                                         android:layout_width="match_parent"
                                         android:layout_height="match_parent"
                                         android:layout_margin="@dimen/_10sdp"
                                         android:layout_weight="1"
-                                        app:cardBackgroundColor="@color/white"
+                                        app:cardBackgroundColor="@color/opacity_red"
                                         app:cardCornerRadius="@dimen/_50sdp"
-                                        app:cardElevation="@dimen/_1sdp" />
+                                        app:cardElevation="@dimen/_0sdp" />
                                     <androidx.cardview.widget.CardView
+                                        android:id="@+id/cvRedHome2"
                                         android:layout_width="match_parent"
                                         android:layout_height="match_parent"
                                         android:layout_margin="@dimen/_10sdp"
                                         android:layout_weight="1"
-                                        app:cardBackgroundColor="@color/white"
+                                        app:cardBackgroundColor="@color/opacity_red"
                                         app:cardCornerRadius="@dimen/_50sdp"
-                                        app:cardElevation="@dimen/_1sdp" />
+                                        app:cardElevation="@dimen/_0sdp" />
                                 </LinearLayout>
                                 <LinearLayout
                                     android:layout_width="match_parent"
@@ -159,21 +163,23 @@
                                     android:layout_weight="1"
                                     android:orientation="horizontal">
                                     <androidx.cardview.widget.CardView
+                                        android:id="@+id/cvRedHome3"
                                         android:layout_width="match_parent"
                                         android:layout_height="match_parent"
                                         android:layout_margin="@dimen/_10sdp"
                                         android:layout_weight="1"
-                                        app:cardBackgroundColor="@color/white"
+                                        app:cardBackgroundColor="@color/opacity_red"
                                         app:cardCornerRadius="@dimen/_50sdp"
-                                        app:cardElevation="@dimen/_1sdp" />
+                                        app:cardElevation="@dimen/_0sdp" />
                                     <androidx.cardview.widget.CardView
+                                        android:id="@+id/cvRedHome4"
                                         android:layout_width="match_parent"
                                         android:layout_height="match_parent"
                                         android:layout_margin="@dimen/_10sdp"
                                         android:layout_weight="1"
-                                        app:cardBackgroundColor="@color/white"
+                                        app:cardBackgroundColor="@color/opacity_red"
                                         app:cardCornerRadius="@dimen/_50sdp"
-                                        app:cardElevation="@dimen/_1sdp" />
+                                        app:cardElevation="@dimen/_0sdp" />
                                 </LinearLayout>
 
 
@@ -182,12 +188,10 @@
                         </androidx.cardview.widget.CardView>
                     </LinearLayout>
                     <LinearLayout
-                        android:id="@+id/llGreenGrid"
                         android:layout_width="@dimen/_0sdp"
                         android:layout_height="match_parent"
                         android:layout_weight="3"
                         android:background="#10000000"
-                        android:foreground="?selectableItemBackgroundBorderless"
                         android:orientation="vertical"
                         android:tag="none">
                         <LinearLayout
@@ -196,40 +200,28 @@
                             android:layout_weight="1"
                             android:orientation="horizontal">
                             <LinearLayout
+                                android:id="@+id/llGreen5"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
+                                android:foreground="@drawable/fg_stroke1"
+                                android:foregroundTint="@color/border_color"
                                 android:orientation="horizontal" />
                             <LinearLayout
+                                android:id="@+id/llGreen6"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
+                                android:foreground="@drawable/fg_stroke1"
+                                android:foregroundTint="@color/border_color"
                                 android:orientation="horizontal" />
                             <LinearLayout
+                                android:id="@+id/llGreen7"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
-                                android:orientation="horizontal" />
-                        </LinearLayout>
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:orientation="horizontal">
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:layout_weight="1"
-                                android:orientation="horizontal" />
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:layout_weight="1"
-                                android:orientation="horizontal" />
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:layout_weight="1"
+                                android:foreground="@drawable/fg_stroke1"
+                                android:foregroundTint="@color/border_color"
                                 android:orientation="horizontal" />
                         </LinearLayout>
                         <LinearLayout
@@ -238,40 +230,30 @@
                             android:layout_weight="1"
                             android:orientation="horizontal">
                             <LinearLayout
+                                android:id="@+id/llGreen4"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
+                                android:foreground="@drawable/fg_stroke1"
+                                android:foregroundTint="@color/border_color"
                                 android:orientation="horizontal" />
                             <LinearLayout
+                                android:id="@+id/llGreenHome5"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
+                                android:background="@color/opacity_green"
+                                android:foreground="@drawable/fg_stroke1"
+                                android:foregroundTint="@color/border_color"
                                 android:orientation="horizontal" />
                             <LinearLayout
+                                android:id="@+id/llGreen8"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
-                                android:orientation="horizontal" />
-                        </LinearLayout>
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:orientation="horizontal">
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:layout_weight="1"
-                                android:orientation="horizontal" />
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:layout_weight="1"
-                                android:orientation="horizontal" />
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:layout_weight="1"
+                                android:background="@color/tag_green"
+                                android:foreground="@drawable/fg_stroke1"
+                                android:foregroundTint="@color/border_color"
                                 android:orientation="horizontal" />
                         </LinearLayout>
                         <LinearLayout
@@ -280,19 +262,30 @@
                             android:layout_weight="1"
                             android:orientation="horizontal">
                             <LinearLayout
+                                android:id="@+id/llGreen3"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
+                                android:background="@color/tag_green"
+                                android:foreground="@drawable/fg_stroke1"
+                                android:foregroundTint="@color/border_color"
                                 android:orientation="horizontal" />
                             <LinearLayout
+                                android:id="@+id/llGreenHome4"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
+                                android:background="@color/opacity_green"
+                                android:foreground="@drawable/fg_stroke1"
+                                android:foregroundTint="@color/border_color"
                                 android:orientation="horizontal" />
                             <LinearLayout
+                                android:id="@+id/llGreen9"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
+                                android:foreground="@drawable/fg_stroke1"
+                                android:foregroundTint="@color/border_color"
                                 android:orientation="horizontal" />
                         </LinearLayout>
                         <LinearLayout
@@ -301,29 +294,101 @@
                             android:layout_weight="1"
                             android:orientation="horizontal">
                             <LinearLayout
+                                android:id="@+id/llGreen2"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
+                                android:foreground="@drawable/fg_stroke1"
+                                android:foregroundTint="@color/border_color"
                                 android:orientation="horizontal" />
                             <LinearLayout
+                                android:id="@+id/llGreenHome3"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
+                                android:background="@color/opacity_green"
+                                android:foreground="@drawable/fg_stroke1"
+                                android:foregroundTint="@color/border_color"
                                 android:orientation="horizontal" />
                             <LinearLayout
+                                android:id="@+id/llGreen10"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
+                                android:foreground="@drawable/fg_stroke1"
+                                android:foregroundTint="@color/border_color"
+                                android:orientation="horizontal" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+                            <LinearLayout
+                                android:id="@+id/llGreen1"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:foreground="@drawable/fg_stroke1"
+                                android:foregroundTint="@color/border_color"
+                                android:orientation="horizontal" />
+                            <LinearLayout
+                                android:id="@+id/llGreenHome2"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@color/opacity_green"
+                                android:foreground="@drawable/fg_stroke1"
+                                android:foregroundTint="@color/border_color"
+                                android:orientation="horizontal" />
+                            <LinearLayout
+                                android:id="@+id/llGreen11"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:foreground="@drawable/fg_stroke1"
+                                android:foregroundTint="@color/border_color"
+                                android:orientation="horizontal" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+                            <LinearLayout
+                                android:id="@+id/llGreen0"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:foreground="@drawable/fg_stroke1"
+                                android:foregroundTint="@color/border_color"
+                                android:orientation="horizontal" />
+                            <LinearLayout
+                                android:id="@+id/llGreenHome1"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@color/opacity_green"
+                                android:foreground="@drawable/fg_stroke1"
+                                android:foregroundTint="@color/border_color"
+                                android:orientation="horizontal" />
+                            <LinearLayout
+                                android:id="@+id/llGreen12"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:foreground="@drawable/fg_stroke1"
+                                android:foregroundTint="@color/border_color"
                                 android:orientation="horizontal" />
                         </LinearLayout>
                     </LinearLayout>
                     <LinearLayout
-                        android:id="@+id/ivBox02"
                         android:layout_width="@dimen/_0sdp"
                         android:layout_height="match_parent"
                         android:layout_weight="6"
-                        android:background="#83EF8A"
-                        android:foreground="?selectableItemBackgroundBorderless"
+                        android:background="@color/tag_green"
+                        android:foreground="@drawable/fg_stroke1"
+                        android:foregroundTint="@color/border_color"
                         android:orientation="vertical"
                         android:tag="none">
                         <androidx.cardview.widget.CardView
@@ -343,21 +408,23 @@
                                     android:layout_weight="1"
                                     android:orientation="horizontal">
                                     <androidx.cardview.widget.CardView
+                                        android:id="@+id/cvGreenHome1"
                                         android:layout_width="match_parent"
                                         android:layout_height="match_parent"
                                         android:layout_margin="@dimen/_10sdp"
                                         android:layout_weight="1"
-                                        app:cardBackgroundColor="@color/white"
+                                        app:cardBackgroundColor="@color/opacity_green"
                                         app:cardCornerRadius="@dimen/_50sdp"
-                                        app:cardElevation="@dimen/_1sdp" />
+                                        app:cardElevation="@dimen/_0sdp" />
                                     <androidx.cardview.widget.CardView
+                                        android:id="@+id/cvGreenHome2"
                                         android:layout_width="match_parent"
                                         android:layout_height="match_parent"
                                         android:layout_margin="@dimen/_10sdp"
                                         android:layout_weight="1"
-                                        app:cardBackgroundColor="@color/white"
+                                        app:cardBackgroundColor="@color/opacity_green"
                                         app:cardCornerRadius="@dimen/_50sdp"
-                                        app:cardElevation="@dimen/_1sdp" />
+                                        app:cardElevation="@dimen/_0sdp" />
                                 </LinearLayout>
                                 <LinearLayout
                                     android:layout_width="match_parent"
@@ -365,21 +432,23 @@
                                     android:layout_weight="1"
                                     android:orientation="horizontal">
                                     <androidx.cardview.widget.CardView
+                                        android:id="@+id/cvGreenHome3"
                                         android:layout_width="match_parent"
                                         android:layout_height="match_parent"
                                         android:layout_margin="@dimen/_10sdp"
                                         android:layout_weight="1"
-                                        app:cardBackgroundColor="@color/white"
+                                        app:cardBackgroundColor="@color/opacity_green"
                                         app:cardCornerRadius="@dimen/_50sdp"
-                                        app:cardElevation="@dimen/_1sdp" />
+                                        app:cardElevation="@dimen/_0sdp" />
                                     <androidx.cardview.widget.CardView
+                                        android:id="@+id/cvGreenHome4"
                                         android:layout_width="match_parent"
                                         android:layout_height="match_parent"
                                         android:layout_margin="@dimen/_10sdp"
                                         android:layout_weight="1"
-                                        app:cardBackgroundColor="@color/white"
+                                        app:cardBackgroundColor="@color/opacity_green"
                                         app:cardCornerRadius="@dimen/_50sdp"
-                                        app:cardElevation="@dimen/_1sdp" />
+                                        app:cardElevation="@dimen/_0sdp" />
                                 </LinearLayout>
 
 
@@ -395,12 +464,10 @@
                     android:orientation="horizontal">
 
                     <LinearLayout
-                        android:id="@+id/llRedGrid"
                         android:layout_width="@dimen/_0sdp"
                         android:layout_height="match_parent"
                         android:layout_weight="6"
                         android:background="#10000000"
-                        android:foreground="?selectableItemBackgroundBorderless"
                         android:orientation="vertical"
                         android:tag="none">
                         <LinearLayout
@@ -409,70 +476,53 @@
                             android:layout_weight="1"
                             android:orientation="horizontal">
                             <LinearLayout
+                                android:id="@+id/llRed7"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
+                                android:foreground="@drawable/fg_stroke1"
+                                android:foregroundTint="@color/border_color"
                                 android:orientation="horizontal" />
                             <LinearLayout
+                                android:id="@+id/llRed8"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
+                                android:background="@color/tag_red"
+                                android:foreground="@drawable/fg_stroke1"
+                                android:foregroundTint="@color/border_color"
                                 android:orientation="horizontal" />
                             <LinearLayout
+                                android:id="@+id/llRed9"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
+                                android:foreground="@drawable/fg_stroke1"
+                                android:foregroundTint="@color/border_color"
                                 android:orientation="horizontal" />
                             <LinearLayout
+                                android:id="@+id/llRed10"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
+                                android:foreground="@drawable/fg_stroke1"
+                                android:foregroundTint="@color/border_color"
                                 android:orientation="horizontal" />
                             <LinearLayout
+                                android:id="@+id/llRed11"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
+                                android:foreground="@drawable/fg_stroke1"
+                                android:foregroundTint="@color/border_color"
                                 android:orientation="horizontal" />
                             <LinearLayout
+                                android:id="@+id/llRed12"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
-                                android:orientation="horizontal" />
-                        </LinearLayout>
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:orientation="horizontal">
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:layout_weight="1"
-                                android:orientation="horizontal" />
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:layout_weight="1"
-                                android:orientation="horizontal" />
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:layout_weight="1"
-                                android:orientation="horizontal" />
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:layout_weight="1"
-                                android:orientation="horizontal" />
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:layout_weight="1"
-                                android:orientation="horizontal" />
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:layout_weight="1"
+                                android:foreground="@drawable/fg_stroke1"
+                                android:foregroundTint="@color/border_color"
                                 android:orientation="horizontal" />
                         </LinearLayout>
                         <LinearLayout
@@ -481,54 +531,130 @@
                             android:layout_weight="1"
                             android:orientation="horizontal">
                             <LinearLayout
+                                android:id="@+id/llRed6"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
+                                android:foreground="@drawable/fg_stroke1"
+                                android:foregroundTint="@color/border_color"
                                 android:orientation="horizontal" />
                             <LinearLayout
+                                android:id="@+id/llRedHome5"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
+                                android:background="@color/opacity_red"
+                                android:foreground="@drawable/fg_stroke1"
+                                android:foregroundTint="@color/border_color"
                                 android:orientation="horizontal" />
                             <LinearLayout
+                                android:id="@+id/llRedHome4"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
+                                android:background="@color/opacity_red"
+                                android:foreground="@drawable/fg_stroke1"
+                                android:foregroundTint="@color/border_color"
                                 android:orientation="horizontal" />
                             <LinearLayout
+                                android:id="@+id/llRedHome3"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
+                                android:background="@color/opacity_red"
+                                android:foreground="@drawable/fg_stroke1"
+                                android:foregroundTint="@color/border_color"
                                 android:orientation="horizontal" />
                             <LinearLayout
+                                android:id="@+id/llRedHome2"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
+                                android:background="@color/opacity_red"
+                                android:foreground="@drawable/fg_stroke1"
+                                android:foregroundTint="@color/border_color"
                                 android:orientation="horizontal" />
                             <LinearLayout
+                                android:id="@+id/llRedHome1"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
+                                android:background="@color/opacity_red"
+                                android:foreground="@drawable/fg_stroke1"
+                                android:foregroundTint="@color/border_color"
+                                android:orientation="horizontal" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+                            <LinearLayout
+                                android:id="@+id/llRed5"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:foreground="@drawable/fg_stroke1"
+                                android:foregroundTint="@color/border_color"
+                                android:orientation="horizontal" />
+                            <LinearLayout
+                                android:id="@+id/llRed4"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:foreground="@drawable/fg_stroke1"
+                                android:foregroundTint="@color/border_color"
+                                android:orientation="horizontal" />
+                            <LinearLayout
+                                android:id="@+id/llRed3"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@color/tag_red"
+                                android:foreground="@drawable/fg_stroke1"
+                                android:foregroundTint="@color/border_color"
+                                android:orientation="horizontal" />
+                            <LinearLayout
+                                android:id="@+id/llRed2"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:foreground="@drawable/fg_stroke1"
+                                android:foregroundTint="@color/border_color"
+                                android:orientation="horizontal" />
+                            <LinearLayout
+                                android:id="@+id/llRed1"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:foreground="@drawable/fg_stroke1"
+                                android:foregroundTint="@color/border_color"
+                                android:orientation="horizontal" />
+                            <LinearLayout
+                                android:id="@+id/llRed0"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:foreground="@drawable/fg_stroke1"
+                                android:foregroundTint="@color/border_color"
                                 android:orientation="horizontal" />
                         </LinearLayout>
                     </LinearLayout>
                     <LinearLayout
-                        android:id="@+id/ivBox11"
                         android:layout_width="@dimen/_0sdp"
                         android:layout_height="match_parent"
                         android:layout_weight="3"
                         android:background="#00000000"
-                        android:foreground="?selectableItemBackgroundBorderless"
+                        android:foreground="@drawable/fg_stroke1"
+                        android:foregroundTint="@color/border_color"
                         android:orientation="vertical"
                         android:tag="none" />
 
                     <LinearLayout
-                        android:id="@+id/llYellowGrid"
                         android:layout_width="@dimen/_0sdp"
                         android:layout_height="match_parent"
                         android:layout_weight="6"
                         android:background="#10000000"
-                        android:foreground="?selectableItemBackgroundBorderless"
                         android:orientation="vertical"
                         android:tag="none">
                         <LinearLayout
@@ -537,70 +663,53 @@
                             android:layout_weight="1"
                             android:orientation="horizontal">
                             <LinearLayout
+                                android:id="@+id/llYellow0"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
+                                android:foreground="@drawable/fg_stroke1"
+                                android:foregroundTint="@color/border_color"
                                 android:orientation="horizontal" />
                             <LinearLayout
+                                android:id="@+id/llYellow1"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
+                                android:foreground="@drawable/fg_stroke1"
+                                android:foregroundTint="@color/border_color"
                                 android:orientation="horizontal" />
                             <LinearLayout
+                                android:id="@+id/llYellow2"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
+                                android:foreground="@drawable/fg_stroke1"
+                                android:foregroundTint="@color/border_color"
                                 android:orientation="horizontal" />
                             <LinearLayout
+                                android:id="@+id/llYellow3"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
+                                android:background="@color/tag_yellow"
+                                android:foreground="@drawable/fg_stroke1"
+                                android:foregroundTint="@color/border_color"
                                 android:orientation="horizontal" />
                             <LinearLayout
+                                android:id="@+id/llYellow4"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
+                                android:foreground="@drawable/fg_stroke1"
+                                android:foregroundTint="@color/border_color"
                                 android:orientation="horizontal" />
                             <LinearLayout
+                                android:id="@+id/llYellow5"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
-                                android:orientation="horizontal" />
-                        </LinearLayout>
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:orientation="horizontal">
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:layout_weight="1"
-                                android:orientation="horizontal" />
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:layout_weight="1"
-                                android:orientation="horizontal" />
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:layout_weight="1"
-                                android:orientation="horizontal" />
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:layout_weight="1"
-                                android:orientation="horizontal" />
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:layout_weight="1"
-                                android:orientation="horizontal" />
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:layout_weight="1"
+                                android:foreground="@drawable/fg_stroke1"
+                                android:foregroundTint="@color/border_color"
                                 android:orientation="horizontal" />
                         </LinearLayout>
                         <LinearLayout
@@ -609,34 +718,112 @@
                             android:layout_weight="1"
                             android:orientation="horizontal">
                             <LinearLayout
+                                android:id="@+id/llYellowHome1"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
+                                android:background="@color/opacity_yellow"
+                                android:foreground="@drawable/fg_stroke1"
+                                android:foregroundTint="@color/border_color"
                                 android:orientation="horizontal" />
                             <LinearLayout
+                                android:id="@+id/llYellowHome2"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
+                                android:background="@color/opacity_yellow"
+                                android:foreground="@drawable/fg_stroke1"
+                                android:foregroundTint="@color/border_color"
                                 android:orientation="horizontal" />
                             <LinearLayout
+                                android:id="@+id/llYellowHome3"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
+                                android:background="@color/opacity_yellow"
+                                android:foreground="@drawable/fg_stroke1"
+                                android:foregroundTint="@color/border_color"
                                 android:orientation="horizontal" />
                             <LinearLayout
+                                android:id="@+id/llYellowHome4"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
+                                android:background="@color/opacity_yellow"
+                                android:foreground="@drawable/fg_stroke1"
+                                android:foregroundTint="@color/border_color"
                                 android:orientation="horizontal" />
                             <LinearLayout
+                                android:id="@+id/llYellowHome5"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
+                                android:background="@color/opacity_yellow"
+                                android:foreground="@drawable/fg_stroke1"
+                                android:foregroundTint="@color/border_color"
                                 android:orientation="horizontal" />
                             <LinearLayout
+                                android:id="@+id/llYellow6"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
+                                android:foreground="@drawable/fg_stroke1"
+                                android:foregroundTint="@color/border_color"
+                                android:orientation="horizontal" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+                            <LinearLayout
+                                android:id="@+id/llYellow12"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:foreground="@drawable/fg_stroke1"
+                                android:foregroundTint="@color/border_color"
+                                android:orientation="horizontal" />
+                            <LinearLayout
+                                android:id="@+id/llYellow11"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:foreground="@drawable/fg_stroke1"
+                                android:foregroundTint="@color/border_color"
+                                android:orientation="horizontal" />
+                            <LinearLayout
+                                android:id="@+id/llYellow10"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:foreground="@drawable/fg_stroke1"
+                                android:foregroundTint="@color/border_color"
+                                android:orientation="horizontal" />
+                            <LinearLayout
+                                android:id="@+id/llYellow9"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:foreground="@drawable/fg_stroke1"
+                                android:foregroundTint="@color/border_color"
+                                android:orientation="horizontal" />
+                            <LinearLayout
+                                android:id="@+id/llYellow8"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@color/tag_yellow"
+                                android:foreground="@drawable/fg_stroke1"
+                                android:foregroundTint="@color/border_color"
+                                android:orientation="horizontal" />
+                            <LinearLayout
+                                android:id="@+id/llYellow7"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:foreground="@drawable/fg_stroke1"
+                                android:foregroundTint="@color/border_color"
                                 android:orientation="horizontal" />
                         </LinearLayout>
                     </LinearLayout>
@@ -647,12 +834,12 @@
                     android:layout_weight="6"
                     android:orientation="horizontal">
                     <LinearLayout
-                        android:id="@+id/ivBox20"
                         android:layout_width="@dimen/_0sdp"
                         android:layout_height="match_parent"
                         android:layout_weight="6"
-                        android:background="#96C6FF"
-                        android:foreground="?selectableItemBackgroundBorderless"
+                        android:background="@color/tag_blue"
+                        android:foreground="@drawable/fg_stroke1"
+                        android:foregroundTint="@color/border_color"
                         android:orientation="vertical"
                         android:tag="none">
                         <androidx.cardview.widget.CardView
@@ -672,21 +859,23 @@
                                     android:layout_weight="1"
                                     android:orientation="horizontal">
                                     <androidx.cardview.widget.CardView
+                                        android:id="@+id/cvBlueHome1"
                                         android:layout_width="match_parent"
                                         android:layout_height="match_parent"
                                         android:layout_margin="@dimen/_10sdp"
                                         android:layout_weight="1"
-                                        app:cardBackgroundColor="@color/white"
+                                        app:cardBackgroundColor="@color/opacity_blue"
                                         app:cardCornerRadius="@dimen/_50sdp"
-                                        app:cardElevation="@dimen/_1sdp" />
+                                        app:cardElevation="@dimen/_0sdp" />
                                     <androidx.cardview.widget.CardView
+                                        android:id="@+id/cvBlueHome2"
                                         android:layout_width="match_parent"
                                         android:layout_height="match_parent"
                                         android:layout_margin="@dimen/_10sdp"
                                         android:layout_weight="1"
-                                        app:cardBackgroundColor="@color/white"
+                                        app:cardBackgroundColor="@color/opacity_blue"
                                         app:cardCornerRadius="@dimen/_50sdp"
-                                        app:cardElevation="@dimen/_1sdp" />
+                                        app:cardElevation="@dimen/_0sdp" />
                                 </LinearLayout>
                                 <LinearLayout
                                     android:layout_width="match_parent"
@@ -694,21 +883,23 @@
                                     android:layout_weight="1"
                                     android:orientation="horizontal">
                                     <androidx.cardview.widget.CardView
+                                        android:id="@+id/cvBlueHome3"
                                         android:layout_width="match_parent"
                                         android:layout_height="match_parent"
                                         android:layout_margin="@dimen/_10sdp"
                                         android:layout_weight="1"
-                                        app:cardBackgroundColor="@color/white"
+                                        app:cardBackgroundColor="@color/opacity_blue"
                                         app:cardCornerRadius="@dimen/_50sdp"
-                                        app:cardElevation="@dimen/_1sdp" />
+                                        app:cardElevation="@dimen/_0sdp" />
                                     <androidx.cardview.widget.CardView
+                                        android:id="@+id/cvBlueHome4"
                                         android:layout_width="match_parent"
                                         android:layout_height="match_parent"
                                         android:layout_margin="@dimen/_10sdp"
                                         android:layout_weight="1"
-                                        app:cardBackgroundColor="@color/white"
+                                        app:cardBackgroundColor="@color/opacity_blue"
                                         app:cardCornerRadius="@dimen/_50sdp"
-                                        app:cardElevation="@dimen/_1sdp" />
+                                        app:cardElevation="@dimen/_0sdp" />
                                 </LinearLayout>
 
 
@@ -718,12 +909,10 @@
                     </LinearLayout>
 
                     <LinearLayout
-                        android:id="@+id/llBlueGrid"
                         android:layout_width="@dimen/_0sdp"
                         android:layout_height="match_parent"
                         android:layout_weight="3"
                         android:background="#10000000"
-                        android:foreground="?selectableItemBackgroundBorderless"
                         android:orientation="vertical"
                         android:tag="none">
                         <LinearLayout
@@ -732,40 +921,29 @@
                             android:layout_weight="1"
                             android:orientation="horizontal">
                             <LinearLayout
+                                android:id="@+id/llBlue12"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
+                                android:foreground="@drawable/fg_stroke1"
+                                android:foregroundTint="@color/border_color"
                                 android:orientation="horizontal" />
                             <LinearLayout
+                                android:id="@+id/llBlueHome1"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
+                                android:background="@color/opacity_blue"
+                                android:foreground="@drawable/fg_stroke1"
+                                android:foregroundTint="@color/border_color"
                                 android:orientation="horizontal" />
                             <LinearLayout
+                                android:id="@+id/llBlue0"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
-                                android:orientation="horizontal" />
-                        </LinearLayout>
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:orientation="horizontal">
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:layout_weight="1"
-                                android:orientation="horizontal" />
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:layout_weight="1"
-                                android:orientation="horizontal" />
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:layout_weight="1"
+                                android:foreground="@drawable/fg_stroke1"
+                                android:foregroundTint="@color/border_color"
                                 android:orientation="horizontal" />
                         </LinearLayout>
                         <LinearLayout
@@ -774,40 +952,29 @@
                             android:layout_weight="1"
                             android:orientation="horizontal">
                             <LinearLayout
+                                android:id="@+id/llBlue11"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
+                                android:foreground="@drawable/fg_stroke1"
+                                android:foregroundTint="@color/border_color"
                                 android:orientation="horizontal" />
                             <LinearLayout
+                                android:id="@+id/llBlueHome2"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
+                                android:background="@color/opacity_blue"
+                                android:foreground="@drawable/fg_stroke1"
+                                android:foregroundTint="@color/border_color"
                                 android:orientation="horizontal" />
                             <LinearLayout
+                                android:id="@+id/llBlue1"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
-                                android:orientation="horizontal" />
-                        </LinearLayout>
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:orientation="horizontal">
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:layout_weight="1"
-                                android:orientation="horizontal" />
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:layout_weight="1"
-                                android:orientation="horizontal" />
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:layout_weight="1"
+                                android:foreground="@drawable/fg_stroke1"
+                                android:foregroundTint="@color/border_color"
                                 android:orientation="horizontal" />
                         </LinearLayout>
                         <LinearLayout
@@ -816,19 +983,29 @@
                             android:layout_weight="1"
                             android:orientation="horizontal">
                             <LinearLayout
+                                android:id="@+id/llBlue10"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
+                                android:foreground="@drawable/fg_stroke1"
+                                android:foregroundTint="@color/border_color"
                                 android:orientation="horizontal" />
                             <LinearLayout
+                                android:id="@+id/llBlueHome3"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
+                                android:background="@color/opacity_blue"
+                                android:foreground="@drawable/fg_stroke1"
+                                android:foregroundTint="@color/border_color"
                                 android:orientation="horizontal" />
                             <LinearLayout
+                                android:id="@+id/llBlue2"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
+                                android:foreground="@drawable/fg_stroke1"
+                                android:foregroundTint="@color/border_color"
                                 android:orientation="horizontal" />
                         </LinearLayout>
                         <LinearLayout
@@ -837,29 +1014,102 @@
                             android:layout_weight="1"
                             android:orientation="horizontal">
                             <LinearLayout
+                                android:id="@+id/llBlue9"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
+                                android:foreground="@drawable/fg_stroke1"
+                                android:foregroundTint="@color/border_color"
                                 android:orientation="horizontal" />
                             <LinearLayout
+                                android:id="@+id/llBlueHome4"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
+                                android:background="@color/opacity_blue"
+                                android:foreground="@drawable/fg_stroke1"
+                                android:foregroundTint="@color/border_color"
                                 android:orientation="horizontal" />
                             <LinearLayout
+                                android:id="@+id/llBlue3"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
+                                android:background="@color/tag_blue"
+                                android:foreground="@drawable/fg_stroke1"
+                                android:foregroundTint="@color/border_color"
+                                android:orientation="horizontal" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+                            <LinearLayout
+                                android:id="@+id/llBlue8"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@color/tag_blue"
+                                android:foreground="@drawable/fg_stroke1"
+                                android:foregroundTint="@color/border_color"
+                                android:orientation="horizontal" />
+                            <LinearLayout
+                                android:id="@+id/llBlueHome5"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@color/opacity_blue"
+                                android:foreground="@drawable/fg_stroke1"
+                                android:foregroundTint="@color/border_color"
+                                android:orientation="horizontal" />
+                            <LinearLayout
+                                android:id="@+id/llBlue4"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:foreground="@drawable/fg_stroke1"
+                                android:foregroundTint="@color/border_color"
+                                android:orientation="horizontal" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+                            <LinearLayout
+                                android:id="@+id/llBlue7"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:foreground="@drawable/fg_stroke1"
+                                android:foregroundTint="@color/border_color"
+                                android:orientation="horizontal" />
+                            <LinearLayout
+                                android:id="@+id/llBlue6"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:foreground="@drawable/fg_stroke1"
+                                android:foregroundTint="@color/border_color"
+                                android:orientation="horizontal" />
+                            <LinearLayout
+                                android:id="@+id/llBlue5"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:foreground="@drawable/fg_stroke1"
+                                android:foregroundTint="@color/border_color"
                                 android:orientation="horizontal" />
                         </LinearLayout>
                     </LinearLayout>
                     <LinearLayout
-                        android:id="@+id/ivBox22"
                         android:layout_width="@dimen/_0sdp"
                         android:layout_height="match_parent"
                         android:layout_weight="6"
-                        android:background="#FCF881"
-                        android:foreground="?selectableItemBackgroundBorderless"
+                        android:background="@color/tag_yellow"
+                        android:foreground="@drawable/fg_stroke1"
+                        android:foregroundTint="@color/border_color"
                         android:orientation="vertical"
                         android:tag="none">
                         <androidx.cardview.widget.CardView
@@ -879,21 +1129,23 @@
                                     android:layout_weight="1"
                                     android:orientation="horizontal">
                                     <androidx.cardview.widget.CardView
+                                        android:id="@+id/cvYellowHome1"
                                         android:layout_width="match_parent"
                                         android:layout_height="match_parent"
                                         android:layout_margin="@dimen/_10sdp"
                                         android:layout_weight="1"
-                                        app:cardBackgroundColor="@color/white"
+                                        app:cardBackgroundColor="@color/opacity_yellow"
                                         app:cardCornerRadius="@dimen/_50sdp"
-                                        app:cardElevation="@dimen/_1sdp" />
+                                        app:cardElevation="@dimen/_0sdp" />
                                     <androidx.cardview.widget.CardView
+                                        android:id="@+id/cvYellowHome2"
                                         android:layout_width="match_parent"
                                         android:layout_height="match_parent"
                                         android:layout_margin="@dimen/_10sdp"
                                         android:layout_weight="1"
-                                        app:cardBackgroundColor="@color/white"
+                                        app:cardBackgroundColor="@color/opacity_yellow"
                                         app:cardCornerRadius="@dimen/_50sdp"
-                                        app:cardElevation="@dimen/_1sdp" />
+                                        app:cardElevation="@dimen/_0sdp" />
                                 </LinearLayout>
                                 <LinearLayout
                                     android:layout_width="match_parent"
@@ -901,21 +1153,23 @@
                                     android:layout_weight="1"
                                     android:orientation="horizontal">
                                     <androidx.cardview.widget.CardView
+                                        android:id="@+id/cvYellowHome3"
                                         android:layout_width="match_parent"
                                         android:layout_height="match_parent"
                                         android:layout_margin="@dimen/_10sdp"
                                         android:layout_weight="1"
-                                        app:cardBackgroundColor="@color/white"
+                                        app:cardBackgroundColor="@color/opacity_yellow"
                                         app:cardCornerRadius="@dimen/_50sdp"
-                                        app:cardElevation="@dimen/_1sdp" />
+                                        app:cardElevation="@dimen/_0sdp" />
                                     <androidx.cardview.widget.CardView
+                                        android:id="@+id/cvYellowHome4"
                                         android:layout_width="match_parent"
                                         android:layout_height="match_parent"
                                         android:layout_margin="@dimen/_10sdp"
                                         android:layout_weight="1"
-                                        app:cardBackgroundColor="@color/white"
+                                        app:cardBackgroundColor="@color/opacity_yellow"
                                         app:cardCornerRadius="@dimen/_50sdp"
-                                        app:cardElevation="@dimen/_1sdp" />
+                                        app:cardElevation="@dimen/_0sdp" />
                                 </LinearLayout>
 
 

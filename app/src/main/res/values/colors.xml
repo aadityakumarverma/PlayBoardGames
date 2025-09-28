@@ -40,11 +40,17 @@
     <color name="btn_green">#37BB69</color>
     <color name="btn_green_half">#9037BB69</color>
 
-    <color name="tag_yellow">#ffb100</color>
-    <color name="tag_green">#33a151</color>
-    <color name="tag_blue">#0092E5</color>
     <color name="tag_gray">#a8a8a8</color>
-    <color name="tag_red">#ED4337</color>">
+    <color name="border_color">#000000</color>
+    <color name="tag_yellow">#FFE013</color>
+    <color name="tag_green">#02A04B</color>
+    <color name="tag_blue">#31b3ff</color>
+    <color name="tag_red">#EB1C24</color>
+
+    <color name="opacity_yellow">#50FFE013</color>
+    <color name="opacity_green">#5002A04B</color>
+    <color name="opacity_blue">#5031b3ff</color>
+    <color name="opacity_red">#50EB1C24</color>
 
     <color name="track_color">#5dbca2</color>
     <color name="indicator_color">#1f90a2</color>
