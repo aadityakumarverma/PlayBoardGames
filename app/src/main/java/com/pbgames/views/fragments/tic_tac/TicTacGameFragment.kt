@@ -10,6 +10,7 @@ import androidx.navigation.NavController
 import androidx.navigation.fragment.findNavController
 import com.pbgames.R
 import com.pbgames.databinding.FragmentTicTacGameBinding
+import com.pbgames.utils.AnimationUtils.springScale
 import com.pbgames.utils.SharedPreferencesHelper
 import com.pbgames.views.activities.MainActivity.Companion.mySystemBars
 
@@ -63,6 +64,7 @@ class TicTacGameFragment : Fragment() {
 
         boxes.forEach { box ->
             box.setOnClickListener {
+                it.springScale()
                 box.setImageResource(if (toggle == "cross") R.drawable.ic_cross else R.drawable.ic_circle)
                 box.isEnabled = false
                 box.tag = toggle

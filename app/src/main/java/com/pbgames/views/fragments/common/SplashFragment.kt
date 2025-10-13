@@ -48,8 +48,8 @@ class SplashFragment : Fragment() {
             } else {
                 navController.navigate(R.id.OnboardingScreenFragment, null, navOptionsPopUpIn)
             }*/
-//            navController.navigate(R.id.TicTacGameFragment, null, navOptionsPopUpIn)
-            navController.navigate(R.id.LudoFragment, null, navOptionsPopUpIn)
+            navController.navigate(R.id.TicTacGameFragment, null, navOptionsPopUpIn)
+//            navController.navigate(R.id.LudoFragment, null, navOptionsPopUpIn)
         },2600)
 
 
