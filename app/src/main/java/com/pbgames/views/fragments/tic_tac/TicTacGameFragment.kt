@@ -65,7 +65,7 @@ class TicTacGameFragment : Fragment() {
         boxes.forEach { box ->
             box.setOnClickListener {
                 it.springScale()
-                box.setImageResource(if (toggle == "cross") R.drawable.ic_cross else R.drawable.ic_circle)
+                box.setImageResource(if (toggle == "cross") R.drawable.icon_cross else R.drawable.icon_circle)
                 box.isEnabled = false
                 box.tag = toggle
                 checkWinner()

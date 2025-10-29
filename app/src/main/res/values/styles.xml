@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="MyTextInputLayoutStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+        <item name="errorEnabled">true</item>
+
+        <item name="boxCornerRadiusBottomEnd">@dimen/_50sdp</item>
+        <item name="boxCornerRadiusBottomStart">@dimen/_50sdp</item>
+        <item name="boxCornerRadiusTopEnd">@dimen/_50sdp</item>
+        <item name="boxCornerRadiusTopStart">@dimen/_50sdp</item>
+    </style>
+
+
+    <style name="MyTabLayoutTextAppearance" parent="TextAppearance.AppCompat.Widget.ActionBar.Title.Inverse">
+        <item name="android:textSize">@dimen/_8sdp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">@font/quicksand_regular</item>
+    </style>
+
+
+
+    <style name="Circular">
+        <item name="cornerSize">50%</item>
+    </style>
+    <style name="RoundedTwoCorner20">
+        <item name="cornerSize">0%</item>
+        <item name="cornerSizeBottomLeft">20%</item>
+        <item name="cornerSizeTopRight">20%</item>
+        <item name="cornerSizeBottomRight">1%</item>
+        <item name="cornerSizeTopLeft">1%</item>
+    </style>
+    <style name="RoundedTwoCorner20reverse">
+        <item name="cornerSize">0%</item>
+        <item name="cornerSizeBottomLeft">1%</item>
+        <item name="cornerSizeTopRight">1%</item>
+        <item name="cornerSizeBottomRight">@dimen/_20sdp</item>
+        <item name="cornerSizeTopLeft">@dimen/_20sdp</item>
+    </style>
+    <style name="RoundedOneCorner20">
+        <item name="cornerSize">0%</item>
+        <item name="cornerSizeBottomLeft">@dimen/_20sdp</item>
+        <item name="cornerSizeTopRight">1%</item>
+        <item name="cornerSizeBottomRight">@dimen/_20sdp</item>
+        <item name="cornerSizeTopLeft">@dimen/_20sdp</item>
+    </style>
+
+    <style name="RoundedTwoCorner40">
+        <item name="cornerSize">0%</item>
+        <item name="cornerSizeBottomLeft">40%</item>
+        <item name="cornerSizeTopRight">40%</item>
+        <item name="cornerSizeBottomRight">1%</item>
+        <item name="cornerSizeTopLeft">1%</item>
+    </style>
+    <style name="RoundedSquare0">
+        <item name="cornerSize">0%</item>
+    </style>
+    <style name="RoundedSquare10">
+        <item name="cornerSize">10%</item>
+    </style>
+    <style name="RoundedSquare20">
+        <item name="cornerSize">20%</item>
+    </style>
+    <style name="RoundedSquare30">
+        <item name="cornerSize">30%</item>
+    </style>
+    <style name="RoundedSquare40">
+        <item name="cornerSize">40%</item>
+    </style>
+    <style name="RoundedSquare50">
+        <item name="cornerSize">50%</item>
+    </style>
+
+
+    <style name="RoundedSquare7sdp">
+        <item name="cornerSize">@dimen/_7sdp</item>
+    </style>
+    <style name="RoundedSquare10sdp">
+        <item name="cornerSize">@dimen/_10sdp</item>
+    </style>
+    <style name="RoundedSquare20sdp">
+        <item name="cornerSize">@dimen/_20sdp</item>
+    </style>
+    <style name="RoundedSquare30sdp">
+        <item name="cornerSize">@dimen/_30sdp</item>
+    </style>
+    <style name="RoundedSquare40sdp">
+        <item name="cornerSize">@dimen/_40sdp</item>
+    </style>
+    <style name="RoundedSquare50sdp">
+        <item name="cornerSize">@dimen/_50sdp</item>
+    </style>
+
+
+
+    <style name="Square">
+        <item name="cornerSize">0%</item>
+    </style>
+
+</resources>

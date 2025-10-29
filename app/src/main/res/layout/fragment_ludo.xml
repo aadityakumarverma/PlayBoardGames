@@ -28,7 +28,7 @@
                 <com.google.android.material.imageview.ShapeableImageView
                     android:layout_width="@dimen/_40sdp"
                     android:layout_height="@dimen/_40sdp"
-                    android:src="@drawable/ic_cross" />
+                    android:src="@drawable/icon_cross" />
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -73,7 +73,7 @@
                 <com.google.android.material.imageview.ShapeableImageView
                     android:layout_width="@dimen/_40sdp"
                     android:layout_height="@dimen/_40sdp"
-                    android:src="@drawable/ic_circle" />
+                    android:src="@drawable/icon_circle" />
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
