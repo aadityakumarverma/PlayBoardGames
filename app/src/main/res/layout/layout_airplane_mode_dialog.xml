@@ -35,14 +35,15 @@
             android:orientation="vertical">
 
             <TextView
+                android:id="@+id/tvRoundCount"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_20sdp"
                 android:background="@color/transparent"
-                android:text="Alert!"
+                android:text="Level 0"
+                android:fontFamily="@font/wow_dino"
                 android:textColor="@color/white"
-                android:textSize="@dimen/tv_title_size"
-                android:textStyle="bold" />
+                android:textSize="@dimen/_50sdp" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -50,40 +51,42 @@
                 android:layout_marginTop="@dimen/_10sdp"
                 android:background="@color/transparent"
                 android:gravity="center"
-                android:text="Airplane Mode Enabled"
-                android:textColor="@color/white" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="@dimen/_10sdp"
-                android:background="@color/transparent"
-                android:gravity="center"
-                android:textSize="@dimen/tv_small_size"
-                android:text="Please turn off Airplane Mode to continue using the app."
+                android:text="Player 1 Wins this Round"
                 android:textColor="@color/white" />
 
-            <androidx.cardview.widget.CardView
-                android:id="@+id/cvGoToSettingBtn"
-                android:layout_width="wrap_content"
+
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginVertical="@dimen/_10sdp"
-                app:cardBackgroundColor="@color/white"
-                app:cardCornerRadius="@dimen/_50sdp"
-                app:contentPadding="@dimen/_1sdp">
-                <TextView
-                    android:id="@+id/tvGoToSettingBtn"
+                android:gravity="center"
+                android:orientation="horizontal">
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/ivRestart"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:background="@drawable/bg_gradient_btn"
-                    android:gravity="center"
-                    android:paddingHorizontal="@dimen/_30sdp"
-                    android:paddingVertical="@dimen/_15sdp"
-                    android:text="Turn Off"
-                    android:textColor="@color/white"
-                    android:textSize="@dimen/btn_text_size"
-                    android:textStyle="bold" />
-            </androidx.cardview.widget.CardView>
+                    android:layout_margin="@dimen/_10sdp"
+                    android:adjustViewBounds="true"
+                    android:background="@color/white"
+                    android:elevation="@dimen/_5sdp"
+                    android:src="@drawable/ic_restart"
+                    android:visibility="visible"
+                    app:contentPadding="@dimen/_7sdp"
+                    app:shapeAppearance="@style/Circular" />
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/ivNextRound"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:adjustViewBounds="true"
+                    android:background="@color/white"
+                    android:elevation="@dimen/_5sdp"
+                    android:src="@drawable/ic_next"
+                    android:visibility="visible"
+                    app:contentPadding="@dimen/_7sdp"
+                    app:shapeAppearance="@style/Circular" />
+
+            </LinearLayout>
+
             <com.airbnb.lottie.LottieAnimationView
                 android:id="@+id/lottieAnimationView"
                 android:layout_width="match_parent"

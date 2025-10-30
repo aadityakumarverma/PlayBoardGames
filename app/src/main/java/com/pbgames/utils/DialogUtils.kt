@@ -35,53 +35,7 @@ import com.pbgames.databinding.LayoutAirplaneModeDialogBinding
 
 object DialogUtils {
 
-
-
-    @Composable
-    fun BouncyOverlay(
-        onDismiss: () -> Unit,
-        content: @Composable () -> Unit
-    ) {
-        var visible by remember { mutableStateOf(false) }
-
-        // trigger animation
-        LaunchedEffect(Unit) { visible = true }
-
-        Box(
-            modifier = Modifier
-                .fillMaxSize()
-                .background(Color(0x66000000))
-                .padding(20.sdp), // optional dim background
-            contentAlignment = Alignment.Center
-        ) {
-            AnimatedVisibility(
-                visible = visible,
-                enter = scaleIn(
-                    initialScale = 0f,
-                    animationSpec = spring(
-                        dampingRatio = Spring.DampingRatioMediumBouncy,
-                        stiffness = Spring.StiffnessLow
-                    )
-                ),
-                exit = scaleOut(
-                    targetScale = 0f,
-                    animationSpec = tween(300)
-                )
-            ) {
-                Surface(
-                    shape = RoundedCornerShape(16.sdp),
-                    color = Color.White,
-                    modifier = Modifier.wrapContentSize()
-                ) {
-                    content()
-                }
-            }
-        }
-    }
-
-
-
-    fun showAirplaneModeDialog(
+    fun showWinnerDialog(
         context: Context,
         layoutInflater: LayoutInflater,
         callback: (res: String) -> Unit
@@ -100,8 +54,12 @@ object DialogUtils {
 
         dialogBinding.apply {
 
-            tvGoToSettingBtn.setOnClickListener {
-                returnValue = "setting"
+            ivRestart.setOnClickListener {
+                returnValue = "restart"
+                dialog.dismiss()
+            }
+            ivNextRound.setOnClickListener {
+                returnValue = "nextRound"
                 dialog.dismiss()
             }
 

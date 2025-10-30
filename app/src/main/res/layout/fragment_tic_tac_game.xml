@@ -209,5 +209,49 @@
 
         </androidx.cardview.widget.CardView>
     </androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:orientation="horizontal">
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/ivUndo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_10sdp"
+            android:adjustViewBounds="true"
+            android:background="@color/white"
+            android:elevation="@dimen/_5sdp"
+            android:src="@drawable/ic_undo"
+            android:visibility="visible"
+            app:contentPadding="@dimen/_7sdp"
+            app:shapeAppearance="@style/Circular" />
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/ivRedo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_10sdp"
+            android:adjustViewBounds="true"
+            android:background="@color/white"
+            android:elevation="@dimen/_5sdp"
+            android:src="@drawable/ic_redo"
+            android:visibility="visible"
+            app:contentPadding="@dimen/_7sdp"
+            app:shapeAppearance="@style/Circular" />
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/ivRestart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_10sdp"
+            android:adjustViewBounds="true"
+            android:background="@color/white"
+            android:elevation="@dimen/_5sdp"
+            android:src="@drawable/ic_restart"
+            android:visibility="visible"
+            app:contentPadding="@dimen/_7sdp"
+            app:shapeAppearance="@style/Circular" />
+
+    </LinearLayout>
 
 </RelativeLayout>

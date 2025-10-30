@@ -11,6 +11,7 @@ import androidx.navigation.fragment.findNavController
 import com.pbgames.R
 import com.pbgames.databinding.FragmentTicTacGameBinding
 import com.pbgames.utils.AnimationUtils.springScale
+import com.pbgames.utils.DialogUtils.showWinnerDialog
 import com.pbgames.utils.SharedPreferencesHelper
 import com.pbgames.views.activities.MainActivity.Companion.mySystemBars
 
@@ -20,7 +21,9 @@ class TicTacGameFragment : Fragment() {
     lateinit var sharedPreferencesHelper: SharedPreferencesHelper
     lateinit var navController: NavController
 
-    lateinit var listBoxes : ArrayList<ImageView>
+    lateinit var listBoxes: ArrayList<ImageView>
+    var forwardSteps = ArrayList<Pair<ImageView, String>>()
+    var backwardSteps = ArrayList<Pair<ImageView, String>>()
 
     var toggle = "cross"
 
@@ -35,9 +38,9 @@ class TicTacGameFragment : Fragment() {
     ): View? {
         _binding = FragmentTicTacGameBinding.inflate(inflater, container, false)
         sharedPreferencesHelper = SharedPreferencesHelper.getInstance(requireContext())
-        navController =findNavController()
+        navController = findNavController()
 
-        binding.llAppBar.setPadding(0, mySystemBars.top,0,0)
+        binding.llAppBar.setPadding(0, mySystemBars.top, 0, 0)
 
         return binding.root
     }
@@ -47,11 +50,32 @@ class TicTacGameFragment : Fragment() {
 
 
         binding.apply {
-            listBoxes = arrayListOf(ivBox00,ivBox01,ivBox02, ivBox10,ivBox11,ivBox12, ivBox20,ivBox21,ivBox22)
+            listBoxes = arrayListOf(
+                ivBox00,
+                ivBox01,
+                ivBox02,
+                ivBox10,
+                ivBox11,
+                ivBox12,
+                ivBox20,
+                ivBox21,
+                ivBox22
+            )
             listBoxes.forEach { it.tag = "none" }
 
-
             setListeners(listBoxes)
+
+            ivUndo.setOnClickListener {
+                if (forwardSteps.isNotEmpty()) {
+                    val lastStep = forwardSteps.get(forwardSteps.lastIndex)
+                    redoStep(lastStep)
+                    backwardSteps.add(lastStep)
+                    forwardSteps.remove(lastStep)
+                }
+            }
+
+            ivRedo.setOnClickListener {
+            }
         }
     }
 
@@ -68,6 +92,7 @@ class TicTacGameFragment : Fragment() {
                 box.setImageResource(if (toggle == "cross") R.drawable.icon_cross else R.drawable.icon_circle)
                 box.isEnabled = false
                 box.tag = toggle
+                forwardSteps.add(Pair(box, box.tag.toString()))
                 checkWinner()
                 toggle = if (toggle == "cross") "circle" else "cross"
             }
@@ -88,12 +113,13 @@ class TicTacGameFragment : Fragment() {
                 listOf(ivBox20, ivBox11, ivBox02)
             )
 
-            for (line in winLines){
+            for (line in winLines) {
                 val tag1 = line[0].tag.toString()
                 val tag2 = line[1].tag.toString()
                 val tag3 = line[2].tag.toString()
 
-                if (tag1 == tag2 && tag2 == tag3 && tag1 != "none"){
+                if (tag1 == tag2 && tag2 == tag3 && tag1 != "none") {
+                    disableAllBoxes()
                     if (tag1 == "cross") increasePlayer1Score() else increasePlayer2Score()
                     return
                 }
@@ -107,18 +133,35 @@ class TicTacGameFragment : Fragment() {
         }
     }
 
+    private fun disableAllBoxes() {
+        listBoxes.forEach { it.isEnabled = false }
+    }
+
 
     private fun increasePlayer1Score() {
         player1Score++
         binding.tvPlayer1Score.text = String.format("%02d", player1Score)
-        resetBoard()
+        showWinnerDialog(requireContext(), layoutInflater) { res ->
+            when (res) {
+                "restart" -> restartGame()
+                "nextRound" -> resetBoard()
+            }
+
+        }
     }
 
     private fun increasePlayer2Score() {
         player2Score++
         binding.tvPlayer2Score.text = String.format("%02d", player2Score)
-        resetBoard()
+        showWinnerDialog(requireContext(), layoutInflater) { res ->
+            when (res) {
+                "restart" -> restartGame()
+                "nextRound" -> resetBoard()
+            }
+
+        }
     }
+
     private fun resetBoard() {
         listBoxes.forEach { box ->
             box.setImageResource(0)
@@ -132,6 +175,15 @@ class TicTacGameFragment : Fragment() {
             toggle = "cross" // alternate starter
             alternateStarter = true
         }
+    }
+
+    private fun redoStep(lastStep: Pair<ImageView, String>) {
+        val lastBox = lastStep.first
+        val lastDraw = lastStep.second
+
+        lastBox.setImageResource(0)
+        lastBox.isEnabled = true
+        lastBox.tag = "none"
     }
 
     private fun restartGame() {
