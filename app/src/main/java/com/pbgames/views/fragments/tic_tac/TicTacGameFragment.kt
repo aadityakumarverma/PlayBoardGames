@@ -13,6 +13,7 @@ import com.pbgames.databinding.FragmentTicTacGameBinding
 import com.pbgames.utils.AnimationUtils.springScale
 import com.pbgames.utils.DialogUtils.showWinnerDialog
 import com.pbgames.utils.SharedPreferencesHelper
+import com.pbgames.utils.UtilsFunctions.setOnClickListeners
 import com.pbgames.views.activities.MainActivity.Companion.mySystemBars
 
 class TicTacGameFragment : Fragment() {
@@ -65,16 +66,31 @@ class TicTacGameFragment : Fragment() {
 
             setListeners(listBoxes)
 
-            ivUndo.setOnClickListener {
+            ivUndo.setOnClickListeners {
                 if (forwardSteps.isNotEmpty()) {
                     val lastStep = forwardSteps.get(forwardSteps.lastIndex)
+                    toggle = lastStep.second
                     redoStep(lastStep)
                     backwardSteps.add(lastStep)
                     forwardSteps.remove(lastStep)
                 }
             }
 
-            ivRedo.setOnClickListener {
+            ivRedo.setOnClickListeners {
+                binding.root.post {
+                    val startView = binding.ivBox00
+                    val middleView = binding.ivBox10
+                    val endView = binding.ivBox20
+
+                    // Get center coordinates
+                    val startX = startView.x + startView.width / 2f
+                    val startY = startView.y + startView.height / 2f
+
+                    val endX = endView.x + endView.width / 2f
+                    val endY = endView.y + endView.height / 2f
+
+                    binding.lineView.drawLineBetween(startX, startY, endX, endY)
+                }
             }
         }
     }
@@ -145,6 +161,7 @@ class TicTacGameFragment : Fragment() {
             when (res) {
                 "restart" -> restartGame()
                 "nextRound" -> resetBoard()
+
             }
 
         }

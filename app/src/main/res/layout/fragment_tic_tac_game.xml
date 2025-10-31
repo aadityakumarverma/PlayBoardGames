@@ -208,6 +208,14 @@
             </LinearLayout>
 
         </androidx.cardview.widget.CardView>
+        <com.pbgames.utils.WinningLineView
+            android:id="@+id/lineView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:elevation="@dimen/_15sdp"
+            android:visibility="gone" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
     <LinearLayout
         android:layout_width="match_parent"
