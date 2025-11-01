@@ -50,7 +50,7 @@ class SplashFragment : Fragment() {
             }*/
             navController.navigate(R.id.TicTacGameFragment, null, navOptionsPopUpIn)
 //            navController.navigate(R.id.LudoFragment, null, navOptionsPopUpIn)
-        },2600)
+        },600)
 
 
         return binding.root

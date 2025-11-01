@@ -2,17 +2,14 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.PBGames" parent="Theme.Material3.Light.NoActionBar">
         <!-- Customize your dark theme here. -->
-        <item name="colorPrimary">@color/app_dark_blue</item>
-        <item name="colorPrimaryDark">@color/app_dark_blue</item>
-        <item name="colorAccent">@color/app_dark_blue</item>
+        <item name="colorPrimary">@color/app_dark</item>
+        <item name="colorPrimaryDark">@color/app_dark</item>
+        <item name="colorAccent">@color/app_dark</item>
         <!-- Status bar color. -->
         <!--        <item name="android:statusBarColor">@color/white</item>-->
         <!-- Removes default splash screen. -->
         <item name="android:windowIsTranslucent">true</item>
-        <item name="android:textColorHighlight">@color/highlight_app_blue</item>
-        <!-- Set default fontFamily. -->
-        <item name="android:fontFamily">@font/quicksand_regular</item>
-        <item name="fontFamily">@font/quicksand_regular</item>
+        <item name="android:textColorHighlight">@color/app_highlight</item>
 
         <!--Adjust screen scroll when keyboard shows-->
         <item name="android:windowSoftInputMode">adjustResize</item>

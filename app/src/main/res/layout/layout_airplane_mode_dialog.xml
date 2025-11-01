@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_margin="@dimen/_0sdp">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="@dimen/_20sdp"
+        app:cardBackgroundColor="@color/app_dark"
+        app:cardCornerRadius="@dimen/_20sdp">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/ivCloseBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_margin="@dimen/_10sdp"
+            android:adjustViewBounds="true"
+            android:background="@color/white"
+            android:elevation="@dimen/_10sdp"
+            android:src="@drawable/ic_cross"
+            android:visibility="visible"
+            app:contentPadding="@dimen/_7sdp"
+            app:shapeAppearance="@style/Circular" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvRoundCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:background="@color/transparent"
+                android:text="Level 0"
+                android:fontFamily="@font/wow_dino"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_50sdp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@color/transparent"
+                android:gravity="center"
+                android:text="Player 1 Wins this Round"
+                android:textColor="@color/white" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/ivRestart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:adjustViewBounds="true"
+                    android:background="@color/white"
+                    android:elevation="@dimen/_5sdp"
+                    android:src="@drawable/ic_restart"
+                    android:visibility="visible"
+                    app:contentPadding="@dimen/_7sdp"
+                    app:shapeAppearance="@style/Circular" />
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/ivNextRound"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:adjustViewBounds="true"
+                    android:background="@color/white"
+                    android:elevation="@dimen/_5sdp"
+                    android:src="@drawable/ic_next"
+                    android:visibility="visible"
+                    app:contentPadding="@dimen/_7sdp"
+                    app:shapeAppearance="@style/Circular" />
+
+            </LinearLayout>
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/lottieAnimationView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:layout_marginStart="-3dp"
+                android:layout_marginEnd="-3dp"
+                android:adjustViewBounds="true"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                app:lottie_rawRes="@raw/anim_flight_mode" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</FrameLayout>
