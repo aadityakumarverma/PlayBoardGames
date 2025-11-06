@@ -34,15 +34,5 @@ object AnimationUtils {
                 start()
             }
         }
-
-        // Alpha animation (fade in)
-        this.alpha = 0f
-        ValueAnimator.ofFloat(0f, 1f).apply {
-            duration = 500L // fade duration
-            addUpdateListener { animator ->
-                this@springScale.alpha = animator.animatedValue as Float
-            }
-            start()
-        }
     }
 }
